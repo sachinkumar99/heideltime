@@ -28,6 +28,12 @@ RULENAME="date_historic_2a-BCADhint",EXTRACTION="(%reApproximate )?(%reMonthLong
 RULENAME="date_historic_2b",EXTRACTION="(%reApproximate )?(%reMonthLong|%reMonthShort)( of | )([\d][\d][\d])",NORM_VALUE="%normYearBC(group(7))-%normMonth(group(3))",NORM_MOD="%normApprox4Dates(group(2))"
 RULENAME="date_historic_2c",EXTRACTION="([Ii]n )(%reMonthLong|%reMonthShort)( of | )%reYear2Digit",NORM_VALUE="UNDEF-centurygroup(6)-%normMonth(group(2))",OFFSET="group(2)-group(6)"
 RULENAME="date_historic_2d",EXTRACTION="(%reMonthLong|%reMonthShort)( of )%reYear2Digit",NORM_VALUE="UNDEF-centurygroup(5)-%normMonth(group(1))"
+RULENAME="date_r0g",EXTRACTION="%reDayNumber-%reMonthShort-%reYear2Digit",NORM_V
+ALUE="UNDEF-centurygroup(3)-%normMonth(group(2))-%normDay(group(1))"
+
+RULENAME="date_r0h",EXTRACTION="%reDayNumber-%reMonthShort-%reYear4Digit",NORM_V
+ALUE="group(3)-%normMonth(group(2))-%normDay(group(1))"
+
 
 // historic dates; day granularity
 // EXAMPLE historic_3a-BCADhint:   March 29, 190 BC     (1- to 4-digit year)
